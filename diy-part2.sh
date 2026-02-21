@@ -19,7 +19,13 @@
 # Modify hostname
 #sed -i 's/OpenWrt/P3TERX-Router/g' package/base-files/files/bin/config_generate
 
-# Masukkan ini ke dalam file diy-part2.sh
+# Hapus paket yang error agar diunduh ulang secara bersih
 rm -rf feeds/luci/libs/rpcd-mod-luci
+rm -rf feeds/luci/modules/luci-base
+rm -rf feeds/luci/modules/luci-mod-admin-full
+
+# Update kembali feeds-nya
 ./scripts/feeds update -a
 ./scripts/feeds install -a
+
+
