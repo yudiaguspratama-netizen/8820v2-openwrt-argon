@@ -26,8 +26,9 @@ env:
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true
+  UPLOAD_GOFILE: false
   TZ: Asia/Jakarta
-  SSH_ACTIONS: true
+  SSH_ACTIONS: false
 
 jobs:
   build:
