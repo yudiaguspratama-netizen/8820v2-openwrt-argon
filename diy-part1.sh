@@ -1,8 +1,5 @@
 #!/bin/bash
-# Hapus feeds lama dan ambil yang segar
+# Hapus sisa build sebelumnya agar tidak bentrok
 rm -rf feeds
 ./scripts/feeds update -a
 ./scripts/feeds install -a
-
-# Tambahkan library yang sering hilang pada build mipsel
-./scripts/feeds install libncurses5-dev
